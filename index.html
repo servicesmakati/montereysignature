@@ -22,8 +22,14 @@
     </div>
   </header>
 
-  <!-- Parallax hero -->
+  <!-- Parallax hero with video -->
   <section class="hero" id="home" aria-label="Hero">
+
+    <!-- Background video -->
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="videos/hero.mp4" type="video/mp4">
+    </video>
+
     <div class="hero-overlay">
       <div class="hero-content container">
         <h1>Monterey Signature</h1>
@@ -56,7 +62,6 @@
       <p class="muted">Click any photo to enlarge.</p>
 
       <div class="gallery-grid" id="galleryGrid">
-        <!-- Replace these with your images under /images/ -->
         <figure class="thumb"><img src="images/collection-1.jpg" alt="Item 1" data-caption="Item 1 — 1950s piece" loading="lazy"></figure>
         <figure class="thumb"><img src="images/collection-2.jpg" alt="Item 2" data-caption="Item 2 — Provenance details" loading="lazy"></figure>
         <figure class="thumb"><img src="images/collection-3.jpg" alt="Item 3" data-caption="Item 3 — Notes" loading="lazy"></figure>
@@ -75,7 +80,7 @@
       </div>
     </section>
 
-    <!-- Story / Timeline style section -->
+    <!-- Story / Timeline -->
     <section id="story" class="section timeline">
       <div class="container">
         <h2>The Story</h2>
