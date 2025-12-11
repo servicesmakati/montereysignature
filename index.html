@@ -56,19 +56,92 @@
       </div>
     </section>
 
-    <!-- Gallery -->
-    <section id="gallery" class="section gallery container">
-      <h2>Gallery</h2>
-      <p class="muted">Click any photo to enlarge.</p>
+<!-- Gallery -->
+<section id="gallery" class="section gallery container">
+  <h2>Gallery</h2>
+  <p class="muted">Click any photo to enlarge.</p>
 
-      <div class="gallery-grid" id="galleryGrid">
-        <figure class="thumb"><img src="first.webp" alt="Item 1" data-caption="Item 1 — 1950s piece" loading="lazy"></figure>
-        <figure class="thumb"><img src="images/collection-2.jpg" alt="Item 2" data-caption="Item 2 — Provenance details" loading="lazy"></figure>
-        <figure class="thumb"><img src="images/collection-3.jpg" alt="Item 3" data-caption="Item 3 — Notes" loading="lazy"></figure>
-        <figure class="thumb"><img src="images/collection-4.jpg" alt="Item 4" data-caption="Item 4 — Notes" loading="lazy"></figure>
-        <figure class="thumb"><img src="images/collection-5.jpg" alt="Item 5" data-caption="Item 5 — Notes" loading="lazy"></figure>
-        <figure class="thumb"><img src="images/collection-6.jpg" alt="Item 6" data-caption="Item 6 — Notes" loading="lazy"></figure>
+  <div class="gallery-grid" id="galleryGrid">
+
+    <!-- SAMPLE — replace with your images -->
+    <figure class="thumb">
+      <img 
+        src="first.webp" 
+        alt="1950s Piece"
+        loading="lazy"
+
+        data-title="Untitled (1950s Piece)"
+        data-year="1954"
+        data-medium="Oil on canvas"
+        data-size="41 × 33 cm"
+        data-provenance="Acquired from a private dealer in Monterey, 2019."
+        data-notes="Considered one of the earliest works associated with the collection."
+      >
+    </figure>
+
+    <figure class="thumb">
+      <img 
+        src="images/collection-2.jpg" 
+        alt="Item 2"
+        loading="lazy"
+
+        data-title="Portrait Study"
+        data-year="1962"
+        data-medium="Mixed media"
+        data-size="50 × 40 cm"
+        data-provenance="Previously part of a European modernist archive."
+        data-notes="Documented as a study for a larger commissioned piece."
+      >
+    </figure>
+
+    <figure class="thumb">
+      <img 
+        src="images/collection-3.jpg" 
+        alt="Item 3"
+        loading="lazy"
+
+        data-title="Still Life with Flowers"
+        data-year="1978"
+        data-medium="Acrylic on board"
+        data-size="38 × 30 cm"
+        data-provenance="Purchased from a Manila private collection."
+        data-notes="Colors restored digitally for preservation."
+      >
+    </figure>
+
+    <!-- Add the rest the same way -->
+  </div>
+
+  <!-- MUSEUM-GRADE LIGHTBOX -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+
+    <!-- Navigation arrows -->
+    <button class="lightbox-nav left" id="lightboxPrev">❮</button>
+    <button class="lightbox-nav right" id="lightboxNext">❯</button>
+
+    <div class="lightbox-inner">
+
+      <!-- Artwork -->
+      <img id="lightboxImage" alt="Artwork">
+
+      <!-- Info panel -->
+      <div class="lightbox-info">
+        <h2 id="lbTitle"></h2>
+        <p class="meta"><span id="lbYear"></span> • <span id="lbMedium"></span> • <span id="lbSize"></span></p>
+
+        <h3>Provenance</h3>
+        <p id="lbProvenance"></p>
+
+        <h3>Notes</h3>
+        <p id="lbNotes"></p>
       </div>
+
+    </div>
+  </div>
+</section>
+
 
       <!-- Lightbox modal -->
       <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
