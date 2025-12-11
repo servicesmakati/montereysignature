@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monterey Signature — The Collection</title>
+  <meta name="description" content="Monterey Signature — a curated collection. Explore the story, the highlights and the gallery." />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Monterey Signature</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#story">Story</a>
+        <a href="contact.html" class="cta">Contact</a>
+      </nav>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <!-- Parallax hero -->
+  <section class="hero" id="home" aria-label="Hero">
+    <div class="hero-overlay">
+      <div class="hero-content container">
+        <h1>Monterey Signature</h1>
+        <p class="subtitle">A personal collection — stories, provenance, and photographs.</p>
+        <a class="btn" href="#gallery">Explore the Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- About -->
+    <section id="about" class="section about container">
+      <h2>About Monterey Signature</h2>
+      <p>Monterey Signature is a private collection focused on [add short mission or focus]. The goal: document, preserve, and share each item's story and provenance.</p>
+      <div class="about-grid">
+        <div>
+          <h3>Curator</h3>
+          <p>Dreamboat — collector, archivist, photographer.</p>
+        </div>
+        <div>
+          <h3>Vision</h3>
+          <p>Emphasize story-based curation with clean photographic presentation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section gallery container">
+      <h2>Gallery</h2>
+      <p class="muted">Click any photo to enlarge.</p>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Replace these with your images under /images/ -->
+        <figure class="thumb"><img src="images/collection-1.jpg" alt="Item 1" data-caption="Item 1 — 1950s piece" loading="lazy"></figure>
+        <figure class="thumb"><img src="images/collection-2.jpg" alt="Item 2" data-caption="Item 2 — Provenance details" loading="lazy"></figure>
+        <figure class="thumb"><img src="images/collection-3.jpg" alt="Item 3" data-caption="Item 3 — Notes" loading="lazy"></figure>
+        <figure class="thumb"><img src="images/collection-4.jpg" alt="Item 4" data-caption="Item 4 — Notes" loading="lazy"></figure>
+        <figure class="thumb"><img src="images/collection-5.jpg" alt="Item 5" data-caption="Item 5 — Notes" loading="lazy"></figure>
+        <figure class="thumb"><img src="images/collection-6.jpg" alt="Item 6" data-caption="Item 6 — Notes" loading="lazy"></figure>
+      </div>
+
+      <!-- Lightbox modal -->
+      <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+        <div class="lightbox-content">
+          <img id="lightboxImage" alt="" />
+          <p id="lightboxCaption"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story / Timeline style section -->
+    <section id="story" class="section timeline">
+      <div class="container">
+        <h2>The Story</h2>
+        <p class="muted">A timeline of select pieces and how they joined the collection.</p>
+        <ol class="timeline-list">
+          <li>
+            <time>1999</time>
+            <h3>First Acquisition</h3>
+            <p>Short note about the first important piece and why it matters.</p>
+          </li>
+          <li>
+            <time>2008</time>
+            <h3>Expanding Focus</h3>
+            <p>How the collection shifted or grew.</p>
+          </li>
+          <li>
+            <time>2022</time>
+            <h3>Cataloguing</h3>
+            <p>Digitization and public sharing began.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Monterey Signature • All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="https://www.facebook.com/MontereySignature" target="_blank" rel="noopener">Facebook</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
