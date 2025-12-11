@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Monterey Signature</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Monterey Signature</a>
+      <nav class="nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#story">Story</a>
+      </nav>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h2>Contact</h2>
+    <p>If you'd like to inquire about an item, collaboration, or borrowing — send a quick message.</p>
+
+    <!-- Replace the action URL with your Formspree endpoint -->
+    <form class="contact-form" method="POST" action="https://formspree.io/f/your-form-id">
+      <label for="name">Name</label>
+      <input id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button class="btn" type="submit">Send message</button>
+    </form>
+
+    <p class="muted">Or message us on our <a href="https://www.facebook.com/MontereySignature" target="_blank" rel="noopener">Facebook page</a>.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year2"></span> Monterey Signature</p>
+    </div>
+  </footer>
+</body>
+</html>
