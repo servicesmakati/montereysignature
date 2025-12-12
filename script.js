@@ -74,4 +74,30 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === "ArrowLeft") prevImage();
     if (e.key === "Escape") closeLightbox();
   });
+
+  // Story modal
+const storyModal = document.getElementById("storyModal");
+const storyOpenButtons = document.querySelectorAll("[data-story-open]");
+const storyClose = document.querySelector(".story-close");
+
+storyOpenButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    storyModal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden"; // lock scroll
+  });
+});
+
+storyClose.addEventListener("click", () => {
+  storyModal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = ""; // restore scroll
+});
+
+// Close on background click
+storyModal.addEventListener("click", e => {
+  if (e.target === storyModal) {
+    storyModal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+});
+
 });
