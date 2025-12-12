@@ -229,6 +229,12 @@ body.lightbox-open {
   z-index: 9999;
 }
 
+#storyModal .story-content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+
 .story-modal[aria-hidden="false"] {
   opacity: 1;
   pointer-events: auto;
