@@ -208,5 +208,68 @@ body.lightbox-open {
   .lightbox-info {
     max-width: 100%;
   }
+
+  
+}
+/* Story modal */
+.story-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  opacity: 0;
+  pointer-events: none;
+  padding: 40px 20px;
+  transition: opacity .3s ease;
+  z-index: 9999;
+}
+
+.story-modal[aria-hidden="false"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.story-panel {
+  background: #fff;
+  max-width: 700px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 30px;
+  line-height: 1.6;
+  font-family: "Georgia", serif;
+  animation: fadeUp .4s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.story-close {
+  background: none;
+  border: none;
+  font-size: 26px;
+  float: right;
+  cursor: pointer;
+}
+
+.story-btn {
+  margin-top: 8px;
+  background: #111;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .story-panel { padding: 20px; }
+  .story-text { font-size: 15px; }
 }
 
