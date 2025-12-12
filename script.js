@@ -100,4 +100,4 @@ storyModal.addEventListener("click", e => {
   }
 });
 
-});
+
